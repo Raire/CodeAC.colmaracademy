@@ -6,6 +6,7 @@ html {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 .content_box {
@@ -61,7 +62,11 @@ a {
   font-size: .70rem;
 }
 
-.bold {
+h1 {
+  font-weight: bold;
+}
+
+.bold { /*Solely For Title Appearance*/
   font-weight: bold;
 }
 
@@ -112,42 +117,46 @@ header nav a {
   transition-duration: 1s;
 }
 
-/*Practice*/
-.practice {
+/*Practice & Thesis Sections*/ /*Similar Format, Refactored To Match*/
+.template_forty_six {
   background-color: #F8F8FF;
 }
 
-.practice .content_box {
+.template_forty_six .content_box {
   align-items: flex-start;
 }
 
-.practice .content1 {
+.template_forty_six .content1 {
   border-right: 1px solid grey;
 }
 
-.practice .content1 img {
-  padding-bottom: 2rem;
+.template_forty_six .content1 img {
+  padding-bottom: 1.5rem;
 }
 
-.practice .content1 h1 {
+.template_forty_six .content1 video {
+  padding-bottom: 1.5rem;
+}
+
+.template_forty_six .content1 h1 {
   font-size: 1.75rem;
   padding-bottom: 1.5rem;
 }
 
-.practice .content1 p {
+.template_forty_six .content1 p {
   font-size: 12px;
-  padding-bottom: 32px;
+  padding-bottom: 2rem;
 }
 
-.practice .content1 span {
+.template_forty_six .content1 span {
   font-size: 10px;
 }
 
-.practice .content2 {
+.template_forty_six .content2 {
   padding-top: 1rem;
 }
 
-.practice .content_section .text_section a {
+.template_forty_six .content_section .text_section a {
   text-decoration: none;
   color: blue;
 }
@@ -157,12 +166,89 @@ header nav a {
   background-color: #DCDCDC;
 }
 
-.learning .content_box { /*Mass Override*/
+.learning .content_box { /*Override For learning*/
   flex-flow: column;
-  padding: 2rem 4.5rem;
+  padding: 2rem 0;
 }
 
 .learning header h1 {
   font-size: 2rem;
   padding-bottom: 2rem;
 }
+
+.learning .learning_boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 4.5rem;
+}
+
+.learning .learning_section {
+  width: 15.625rem;
+  margin: .5rem;
+  background-color: white;
+}
+
+.learning .learning_section img{
+  height: auto;
+  width: 100%;
+}
+
+.learning .text_section {
+  padding: 1rem 1rem 1rem 1.5rem;
+  font-size: .75rem;
+}
+
+.learning .text_section h1 {
+  font-size: 1.15rem;
+}
+
+.learning .text_section h2 {
+  padding: .5rem 0;
+}
+
+/*Thesis*/ /*Mainly Overrides*/
+#thesis {
+  background-color: #F8F8FF;
+}
+
+#thesis .content_box{
+  padding: 2rem 0;
+}
+
+#thesis header h1 {
+  padding: 0;
+}
+
+.template_forty_six #thesis .content1 {
+  padding: 0 1.5rem;
+  border-right: none;
+}
+
+.template_forty_six #thesis .content1 .p2 {
+  font-size: 16px;
+  padding-bottom: .5rem;
+  font-weight: bold;
+}
+
+.template_forty_six #thesis .content2 {
+  padding-top: 0;
+}
+
+/*Footer*/
+.footer {
+  font-size: .75rem;
+  padding: 1rem 0 2rem 0;
+  border-top: 1px solid #DCDCDC;
+}
+
+.footer .copyright {
+  padding-left: 1.5rem;
+}
+
+.footer .nav {
+  padding-right: 1.5rem;
+}
+
+
+/*In Hindsight, I didn't separate into enough sections which made the CSS sloppy down the line*/
