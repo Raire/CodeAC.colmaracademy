@@ -3,12 +3,10 @@ html {
   font-family: sans-serif;
   font-size: 16px;
 }
-
 a {
   text-decoration: none;
   color: black;
 }
-
 .content_box {
   display: flex;
   align-items: center;
@@ -16,56 +14,45 @@ a {
   margin: 0 auto;
   max-width: 60rem;
 }
-
 .content1 {
   padding: 2rem 1.5rem;
   width: 60%;
 }
-
 .content1 img {
   width: 100%;
 }
-
 .content2 {
   display: flex;
   flex-flow: column;
   width: 40%;
   padding-right: 1.5rem;
 }
-
 .content_section {
   display: flex;
   align-items: center;
 }
-
 .content_section:hover {
   background-color: #DCDCDC;
   transition-duration: 1s;
 }
-
 .content_section img {
   width: 35%;
   height: auto;
   padding: 1rem;
 }
-
 .content_section .text_section {
   width: 65%;
 }
-
 .content_section .text_section h1 {
   font-size: 1.125rem;
 }
-
 .content_section .text_section p {
   padding: .5rem 0;
   font-size: .70rem;
 }
-
 h1 {
   font-weight: bold;
 }
-
 .bold { /*Solely For Title Appearance*/
   font-weight: bold;
 }
@@ -75,19 +62,19 @@ header .content_box {
   padding: 0 1.5rem;
   height: 4rem;
 }
-
 header .logo {
   display: flex;
   align-items: center;
   font-size: 1.25rem;
 }
-
 header .logo img {
   height: 2rem;
 }
-
-header nav a {
+header nav span {
   margin-left: 1rem;
+}
+header .hid_logo {
+  display: none;
 }
 
 /*Main*/
@@ -95,67 +82,57 @@ header nav a {
 .banner {
   background-color: #DCDCDC;
 }
-
 .banner .content2 h1 {
   font-size: 2rem;
 }
-
 .banner .content2 h2 {
   font-size: 1.25rem;
   padding: 1.25rem 0;
 }
-
 .banner .content2 a {
   text-align: center;
   padding: 1rem; 0;
   background-color: grey;
   color: white;
 }
-
 .banner .content2 a:hover {
   background-color: black;
   transition-duration: 1s;
 }
 
 /*Practice & Thesis Sections*/ /*Similar Format, Refactored To Match*/
+#practice #mobile {
+  display: none;
+}
 .template_forty_six {
   background-color: #F8F8FF;
 }
-
 .template_forty_six .content_box {
   align-items: flex-start;
 }
-
 .template_forty_six .content1 {
   border-right: 1px solid grey;
 }
-
 .template_forty_six .content1 img {
   padding-bottom: 1.5rem;
 }
-
 .template_forty_six .content1 video {
   padding-bottom: 1.5rem;
 }
-
 .template_forty_six .content1 h1 {
   font-size: 1.75rem;
   padding-bottom: 1.5rem;
 }
-
 .template_forty_six .content1 p {
   font-size: 12px;
   padding-bottom: 2rem;
 }
-
 .template_forty_six .content1 span {
   font-size: 10px;
 }
-
 .template_forty_six .content2 {
   padding-top: 1rem;
 }
-
 .template_forty_six .content_section .text_section a {
   text-decoration: none;
   color: blue;
@@ -165,44 +142,36 @@ header nav a {
 .learning {
   background-color: #DCDCDC;
 }
-
 .learning .content_box { /*Override For learning*/
   flex-flow: column;
   padding: 2rem 0;
 }
-
 .learning header h1 {
   font-size: 2rem;
   padding-bottom: 2rem;
 }
-
 .learning .learning_boxes {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 4.5rem;
 }
-
 .learning .learning_section {
   width: 15.625rem;
   margin: .5rem;
   background-color: white;
 }
-
 .learning .learning_section img{
   height: auto;
   width: 100%;
 }
-
 .learning .text_section {
   padding: 1rem 1rem 1rem 1.5rem;
   font-size: .75rem;
 }
-
 .learning .text_section h1 {
   font-size: 1.15rem;
 }
-
 .learning .text_section h2 {
   padding: .5rem 0;
 }
@@ -211,26 +180,21 @@ header nav a {
 #thesis {
   background-color: #F8F8FF;
 }
-
-#thesis .content_box{
+#thesis .content_box {
   padding: 2rem 0;
 }
-
 #thesis header h1 {
   padding: 0;
 }
-
 .template_forty_six #thesis .content1 {
-  padding: 0 1.5rem;
+  padding-top: 1rem;
   border-right: none;
 }
-
 .template_forty_six #thesis .content1 .p2 {
   font-size: 16px;
   padding-bottom: .5rem;
   font-weight: bold;
 }
-
 .template_forty_six #thesis .content2 {
   padding-top: 0;
 }
@@ -241,14 +205,145 @@ header nav a {
   padding: 1rem 0 2rem 0;
   border-top: 1px solid #DCDCDC;
 }
-
 .footer .copyright {
   padding-left: 1.5rem;
 }
-
 .footer .nav {
   padding-right: 1.5rem;
 }
 
+/*In Hindsight, I didn't plan enough which made the CSS sloppy down the line For Responsive Design*/
 
-/*In Hindsight, I didn't separate into enough sections which made the CSS sloppy down the line*/
+/*Responsive Design Under 750Pixels*/
+@media only screen and (max-width: 750px) {
+  .content1 {
+    padding: 1rem .5rem;
+  }
+  .content2 {
+    padding-right: .5rem;
+  }
+
+  .banner .content2 {
+    align-items: center;
+    text-align: center;
+  }
+  .banner .content2 h1 {
+    font-size: 1.75rem;
+  }
+  .banner .content2 h2 {
+    font-size: 1rem;
+    padding: 1.25rem 0;
+  }
+
+  #practice .content1 {
+    display: none;
+  }
+  #practice .content2 {
+    width: 100%;
+  }
+
+  #thesis .content1 {
+    width: 100%;
+  }
+  #thesis .content2 {
+    display: none;
+  }
+
+/*Responsive Design Under 695Pixels*/
+  @media only screen and (max-width:695px) {
+    header nav span {
+      display: inline-block;
+      font-size: 0;
+      height: 32px;
+      width: 32px;
+    }
+    header .campus {
+      background: url(../images/ic-on-campus.svg) no-repeat;
+    }
+    header .online {
+      background: url(../images/ic-online.svg) no-repeat;
+    }
+    header .company {
+      display: none;
+    }
+    header .sign {
+      background: url(../images/ic-login.svg) no-repeat;
+    }
+
+    .learning .learning_boxes {
+      flex-flow: column;
+      justify-content: space-between;
+      padding: 0 4.5rem;
+    }
+  }
+
+    /*Responsive Design Under 520Pixels*/
+      @media only screen and (max-width:520px) {
+        .content_box {
+          justify-content: center;
+        }
+        .content1 {
+          padding: 0;
+          width: auto;
+        }
+        .content2 {
+          width: auto;
+          padding: 0;
+        }
+
+        header .logo {
+          display: none;
+        }
+        header .hid_logo {
+          display: inline-block;
+          background: url(../images/ic-logo.svg) no-repeat;
+        }
+
+        .banner .content_box {
+          flex-flow: column;
+        }
+        .banner .content1 {
+          padding-bottom: 32px;
+        }
+        .banner .content2 h2 {
+          padding: 2rem 0;
+        }
+        .banner .content2 a {
+          margin-bottom: 2rem;
+        }
+
+        #practice .content_section {
+          flex-flow: column;
+        }
+        #practice .content_section img {
+          width: 90%;
+        }
+        #practice .text_section {
+          width: 90%;
+          margin: 1rem;
+        }
+        #practice #desk {
+          display: none;
+        }
+        #practice #mobile {
+          display: block;
+        }
+
+        .learning .learning_section img {
+          display: none;
+        }
+        .learning .learning_section h2 {
+          display: none;
+        }
+        .learning .learning_section p {
+          display: none;
+        }
+
+        #thesis .content1 {
+          padding: 0;
+        }
+        #thesis p {
+          display: none;
+        }
+      }
+}
